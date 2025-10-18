@@ -1,0 +1,188 @@
+:root {
+  --army-green: #3b4b3b;       /* أخضر زيتي غامق */
+  --dark-olive: #2e382e;       /* خلفية غامقة */
+  --gold: #d4af37;             /* ذهبي رسمي */
+  --sand: #c2b280;             /* رملي فاتح */
+  --text-light: #f4f4f4;
+}
+
+body {
+  margin: 0;
+  font-family: "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
+  direction: rtl;
+  background: linear-gradient(180deg, var(--dark-olive), var(--army-green));
+  color: var(--text-light);
+  min-height: 100vh;
+}
+
+/* الشعار والعنوان */
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  background: var(--army-green);
+  border-bottom: 4px solid var(--gold);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+.bazoka {
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+.logo {
+  height: 60px;
+  margin-right: 12px;
+  border-radius: 10px;
+}
+
+/* الصفحة الرئيسية */
+.container {
+  max-width: 900px;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+.hero {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  text-align: center;
+  padding: 28px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+.subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+.search-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+#searchInput {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  font-size: 16px;
+}
+#searchBtn {
+  background: var(--gold);
+  border: none;
+  color: var(--army-green);
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#searchBtn:hover {
+  background: #e5c94d;
+}
+
+/* البطاقة */
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border-right: 4px solid var(--gold);
+}
+.card .name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--gold);
+}
+.card .role {
+  font-size: 14px;
+  color: #dcdcdc;
+}
+.card .phone {
+  font-weight: 700;
+  margin-top: 6px;
+  color: var(--sand);
+}
+
+/* الأزرار */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.btn {
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+.copy {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--text-light);
+}
+.copy:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.call {
+  background: var(--gold);
+  color: var(--army-green);
+}
+.call:hover {
+  background: #e5c94d;
+}
+
+/* القائمة */
+.list-area {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+#contactsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+#contactsList li {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#contactsList li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-right: 4px solid var(--gold);
+}
+
+/* الفوتر */
+.site-footer {
+  text-align: center;
+  margin-top: 35px;
+  padding: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  background: var(--army-green);
+  border-top: 3px solid var(--gold);
+}
+.eagle {
+  height: 60px;
+  filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.5));
+  margin-left: 12px;
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.9; }
+}
